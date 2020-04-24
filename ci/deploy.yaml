@@ -23,5 +23,7 @@ deploywebsite:
 
     script:
 
+        # add addisonlynch.com to known hosts
+        ssh-keyscan addisonlynch.com > /root/.ssh/known_hosts
 
-
+        scp -r src/public root@addisonlynch.com:/var/www/blog

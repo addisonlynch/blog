@@ -3,11 +3,12 @@ image: ruby:2.6
 stages:
     - lint
     - build
+    - deploy
 
 include:
     - local: '/ci/lint.yaml'
     - local: '/ci/build.yaml'
-    # - local: '/ci/deploy.yaml'
+    - local: '/ci/deploy.yaml'
 
 # cache jekyll installation
 cache:
