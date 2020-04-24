@@ -4,8 +4,8 @@ deploywebsite:
     stage: deploy
     tags:
         - deploy
-    only:
-        master
+    # only:
+    #     master
     before_script:
         
         ## Install ssh-agent if not already installed
