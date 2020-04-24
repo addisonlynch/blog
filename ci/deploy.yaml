@@ -28,4 +28,4 @@ deploywebsite:
 
     script:
 
-        - scp -r public/* root@addisonlynch.com:/var/www/blog/
+        - scp -r src/public/* root@addisonlynch.com:/var/www/blog/
