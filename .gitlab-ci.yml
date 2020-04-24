@@ -9,8 +9,3 @@ include:
     - local: '/ci/lint.yaml'
     - local: '/ci/build.yaml'
     - local: '/ci/deploy.yaml'
-
-# cache jekyll installation
-cache:
-    paths:
-        - vendor/

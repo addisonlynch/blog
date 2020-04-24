@@ -4,6 +4,10 @@ pages:
         - cd src
         - bundle install
         - bundle exec jekyll build -d public
-    artifacts:
+    # cache jekyll installation
+    cache:
         paths:
-            - public
+            - vendor/
+    # artifacts:
+    #     paths:
+    #         - public
