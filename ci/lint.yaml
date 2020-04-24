@@ -1,9 +1,6 @@
 # Generic linting template
 .lint: &lint
     stage: lint
-    tags:
-        - lint
-
 
 # lint markdown (posts)
 markdownlint:
