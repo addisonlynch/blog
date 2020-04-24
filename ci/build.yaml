@@ -10,4 +10,4 @@ buildwebsite:
             - vendor/
     artifacts:
         paths:
-            - public
+            - src/public
