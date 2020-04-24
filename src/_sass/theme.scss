@@ -35,6 +35,10 @@ body {
 	max-width: 100%;
 }
 
+.body-wrapper{
+	overflow-x: hidden;
+}
+
 a {
 	color: $linkColor;
 	text-decoration: none;
@@ -90,6 +94,7 @@ h4 {
 		div.highlight {
 			padding: 30px 15px;
 		}
+		padding-left: 0px;
 	}
 
 	@media screen and (max-width: $tabWidth) and (min-width: $mobileWidth){
