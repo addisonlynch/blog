@@ -1,4 +1,4 @@
-pages:
+buildwebsite:
     stage: build
     script:
         - cd src
@@ -8,6 +8,6 @@ pages:
     cache:
         paths:
             - vendor/
-    # artifacts:
-    #     paths:
-    #         - public
+    artifacts:
+        paths:
+            - public
