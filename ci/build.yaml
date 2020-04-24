@@ -7,7 +7,7 @@ buildwebsite:
     # cache jekyll installation
     cache:
         paths:
-            - vendor/
+            - src/vendor/
     artifacts:
         paths:
             - src/public
