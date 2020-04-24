@@ -4,7 +4,7 @@ deploywebsite:
     stage: deploy
     image: gotechnies/alpine-ssh
     only:
-        master
+        - master
     before_script:
         
         # Create ssh directory and give it the right permissions
