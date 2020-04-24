@@ -1,0 +1,5 @@
+style "all"
+show_kramdown_warnings false
+
+# rules
+rules "~MD041", "~MD013", "~MD002", "~MD040", "~MD026"

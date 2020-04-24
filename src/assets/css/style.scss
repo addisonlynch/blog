@@ -1,0 +1,40 @@
+---
+---
+
+@import "theme";
+
+
+/* CUSTOM CSS ADDED BY AL */
+header p{
+    color: $darkBlue;
+}
+
+a#siteTitle{
+    color: $darkDarkBlue;
+    text-decoration: none;
+}
+
+a#siteTitle:hover{
+    text-decoration: none;
+}
+
+#siteTagline{
+    font-size: 14px;
+    color: $gray;
+}
+
+.sidebar{
+    font-size: 0.6em;
+    line-height: 1.15;
+    margin-top: 3em;
+    h6{
+        font-weight: 700;
+    }
+}
+
+.sidebar-item{
+    
+    &:not(:last-child) {
+        border-bottom: 1px solid $lightGray;
+    }
+}

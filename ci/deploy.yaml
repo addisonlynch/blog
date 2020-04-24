@@ -1,0 +1,27 @@
+# SSH key instructions: https://docs.gitlab.com/ee/ci/ssh_keys/
+
+deploywebsite:
+    stage: deploy
+    tags:
+        - deploy
+    only:
+        master
+    before_script:
+        
+        ## Install ssh-agent if not already installed
+        - 'which ssh-agent || ( apt-get update -y && apt-get install openssh-client -y )'
+
+        ## Run ssh-agent (inside the build environment)
+        - eval $(ssh-agent -s)
+
+        # Add SSH key stored in SSH_PRIVATE_KEY variable to the agent store
+        - echo "$SSH_PRIVATE_KEY" | tr -d '\r' | ssh-add -
+
+        # Create ssh directory and give it the right permissions
+        - mkdir -p ~/.ssh
+        - chmod 700 ~/.ssh
+
+    script:
+
+
+

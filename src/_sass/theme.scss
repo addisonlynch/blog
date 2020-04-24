@@ -1,0 +1,268 @@
+@import 'ext/fonts';
+@import 'ext/normalize';
+@import 'begin';
+@import 'syntax';
+
+$linkColor: #2a7aaf;
+$mobileW: 768px;
+$smallMobileW: 480px;
+$bigScreenW: 1600px;
+$leftWidth: 220px;
+
+$lightBlue: #3498db;
+$darkBlue: #34495e;
+$lightGray: #ebedef;
+$yellow: #f1c40f;
+$darkDarkBlue: #243342;
+
+$gray: #999;
+$midGray: #555;
+
+*,*:before,*:after {
+	box-sizing: border-box;
+}
+
+/* BEGIN: text styling */
+body {
+	font-family: $body-font;
+	color: $darkDarkBlue;
+	@include fluidType(16px, 19px);
+	line-height: 1.55em;
+	margin: 0;
+	background-color: $lightGray;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	max-width: 100%;
+}
+
+a {
+	color: $linkColor;
+	text-decoration: none;
+	transition: border-bottom 0.4s;
+	&:hover {
+		border-bottom: 0.5px solid $linkColor;
+	}
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: $heading-font;
+	color: $darkDarkBlue;
+}
+
+h1, h2, h3 {
+	line-height: 1.2em;
+	font-weight: 700;
+}
+
+h1 {
+	@include fluidType(36px, 48px);
+}
+
+h2 {
+	@include fluidType(28px, 32px);
+}
+
+h4 {
+	@include fluidType(18px, 20px);
+}
+/* END: text styling */
+
+.clearfix {
+	clear: both;
+}
+
+//
+// Basic Container Class
+//
+.container {
+	margin: 0 auto;
+	max-width: 1000px;
+
+	div.highlighter-rouge {
+		right: 150px;
+	}
+
+	@media screen and  (max-width: $mobileWidth) {
+		margin:0 15px; 
+		div.highlighter-rouge {
+			right: 15px;
+		}
+		div.highlight {
+			padding: 30px 15px;
+		}
+	}
+
+	@media screen and (max-width: $tabWidth) and (min-width: $mobileWidth){
+		margin:0 40px;	
+		div.highlighter-rouge {
+			right: 40px;
+		}
+		div.highlight {
+			padding: 30px 40px;
+		}
+	}
+
+	@media screen and (max-width: $desktopWidth) and (min-width: $tabWidth){
+		margin:0 80px;
+		div.highlighter-rouge {
+			right: 80px;
+		}
+		div.highlight {
+			padding: 30px 80px;
+		}
+	}
+
+	@media screen and (min-width: $desktopWidth) and (max-width: 1280px) {
+		margin:0 100px;
+		div.highlighter-rouge {
+			right: 100px;
+		}
+		div.highlight {
+			padding: 30px 100px;
+		}
+	}
+}
+
+/* BEGIN: post styling */
+
+.posts {
+	list-style-type: none;
+	padding: 0;
+	>li {
+		margin-bottom: 30px;
+		padding-bottom: 20px;
+		&:not(:last-child) {
+			border-bottom: 1px solid $lightGray;
+		}
+	}
+}
+
+.post-container {
+	img {
+		margin: 20px 0;
+	}
+}
+
+.post-meta{
+	font-family: $mono-font;
+	font-size: 0.6em;
+	line-height: 1.5;
+	color: $gray;
+	margin: 2em auto;
+}
+
+.post-date{
+	font-size: 1.25em;
+}
+
+
+.post-description{
+	color: $midGray;
+}
+
+.post-categories{
+	list-style: none;
+	padding-left: 0;
+
+	a:hover {
+		text-decoration: none;
+	}
+}
+
+.post-categories-horizontal{
+	li {
+		display: inline;
+	}
+}
+
+.post-category{
+	border: 2px solid $lightBlue;
+	border-radius: 0.8em;
+	font-size: 12px;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+	padding: 0.2em;
+	background-color: $lightGray;
+	transition: background-color 0.3s linear;
+	transition: border-color 0.3s linear;
+	transition: color 0.3s linear;
+}
+
+.post-category:hover{
+	background-color: $gray;
+	color: $lightGray;
+	transition: background-color 0.3s linear;
+	transition: color 0.3s linear;
+}
+
+.post-meta-item{
+	margin: 0.5em auto;
+	h1,h2,h3,h4,h5,h6{
+		margin-bottom: 0;
+	}
+}
+
+.post-share-icons{
+	a:not(:last-child){
+		margin: auto 0.5em;
+	}
+
+	p{
+		font-size: 0.75em;
+		margin: 0;
+		font-family: $mono-font;
+		color: $darkBlue
+	}
+}
+
+.post-footer{
+	margin-top: 2em;
+}
+
+/* END: post styling */
+
+/* BEGIN: categories page */
+
+.category-hero{
+	text-align: center;
+	margin: 7em auto;
+	max-width: 10%;
+
+	.post-category{
+		font-size: 3em;
+	}
+}
+
+@media screen and (max-width: $tabWidth){
+	.category-hero{
+		text-align: start;
+	}
+}
+
+.navbar{
+	ul{
+		list-style-type: none;
+		li {
+			display: inline;
+			color: $darkDarkBlue;
+		}
+	}
+}
+
+.mono-text{
+	font-family: $mono-font
+}
+
+.site-title-bar{
+	margin-top: 3em;
+}
+
+.blue{
+	color: $lightBlue;
+}
+
+.fab{
+	color: $darkDarkBlue;
+	font-size: 1.5em;
+}

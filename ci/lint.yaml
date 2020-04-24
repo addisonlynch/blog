@@ -1,0 +1,18 @@
+# Generic linting template
+.lint: &lint
+    stage: lint
+    tags:
+        - lint
+
+
+# lint markdown (posts)
+markdownlint:
+    <<: *lint
+    image:
+        name: ruby:alpine
+        entrypoint: [""]
+    before_script:
+        - gem install mdl
+        - mdl --version
+    script:
+        - mdl .

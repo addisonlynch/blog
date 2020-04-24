@@ -1,0 +1,17 @@
+{%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+<div class="post-meta">
+    <a class="post-meta-item post-link" href="{{ post.url | relative_url }}">
+        <h2 class="post-title">{{ post.title | escape }}</h2>
+    </a>
+    <div class="post-meta-item post-date">{{ post.date | date: date_format }}</div>
+    <ul class="post-meta-item post-categories post-categories-horizontal">
+        {% for category in post.categories %}
+        <a href="/category/{{ category }}"><li class="post-category">{{ category }}</li></a>
+        {% endfor %}
+    </ul>
+</div>
+<div class="post">
+    {%- if site.show_excerpts -%}
+    {{ post.excerpt }}
+    {%- endif -%}
+</div>
