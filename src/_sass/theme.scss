@@ -29,7 +29,7 @@ body {
 	@include fluidType(16px, 19px);
 	line-height: 1.55em;
 	margin: 0;
-	background-color: $lightGray;
+	background-color: #fff;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	max-width: 100%;
@@ -55,7 +55,7 @@ h1, h2, h3, h4, h5, h6 {
 
 h1, h2, h3 {
 	line-height: 1.2em;
-	font-weight: 700;
+	font-weight: 800;
 }
 
 h1 {

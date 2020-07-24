@@ -4,12 +4,15 @@ email: ahlshop@gmail.com
 description: > # this means to ignore newlines until "show_exerpts:"
   Addison Lynch's technical blog. Musings about programming & finance.
 show_excerpts: true # set to true to show excerpts on the homepage
-baseurl: ""
+baseurl: "/blog"
 
 # Minima date format
 # refer to http://shopify.github.io/liquid/filters/date/ if you want to customize this
 sass:
   sass_dir: _sass
+
+ga:
+  tracking_id: UA-173440585-1
 
 permalink: /posts/:title/
 texture:
