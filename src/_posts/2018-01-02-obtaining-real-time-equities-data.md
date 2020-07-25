@@ -5,6 +5,7 @@ author: Addison Lynch
 description: The landscape of free equities data is changing.
 categories: [code, finance]
 date:   2018-01-02 21:03:36 +0530
+image: assets/img/AddisonLynchLogoSquare.png
 ---
 
 Until recently, high-frequency equities traders that wished to obtain cost-free equities data relied on both the Google Finance and Yahoo Finance APIs. As of 1/2018, both [Yahoo](https://forums.yahoo.net/t5/Yahoo-Finance-help/Is-Yahoo-Finance-API-broken/m-p/250503#U250503) and [Google](https://stackoverflow.com/questions/46070126/google-finance-json-stock-quote-stopped-working/)'s services have shut down.

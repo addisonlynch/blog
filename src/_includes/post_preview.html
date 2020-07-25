@@ -6,7 +6,7 @@
     <div class="post-meta-item post-date">{{ post.date | date: date_format }}</div>
     <ul class="post-meta-item post-categories post-categories-horizontal">
         {% for category in post.categories %}
-        <a href="{{ site.baseurl}}/category/{{ category }}"><li class="post-category">{{ category }}</li></a>
+        <a href="{{ site.baseurl}}/category/{{ category }}" class="post-category"><li>{{ category }}</li></a>
         {% endfor %}
     </ul>
 </div>

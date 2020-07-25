@@ -188,7 +188,6 @@ h4 {
 	-moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
 	padding: 0.2em;
-	background-color: $lightGray;
 	transition: background-color 0.3s linear;
 	transition: border-color 0.3s linear;
 	transition: color 0.3s linear;
@@ -199,6 +198,7 @@ h4 {
 	color: $lightGray;
 	transition: background-color 0.3s linear;
 	transition: color 0.3s linear;
+	text-decoration: none;
 }
 
 .post-meta-item{
@@ -267,7 +267,11 @@ h4 {
 	color: $lightBlue;
 }
 
-.fab{
+.fab, .fas{
 	color: $darkDarkBlue;
 	font-size: 1.5em;
+}
+
+a.copy-btn:hover{
+	cursor:pointer;
 }
